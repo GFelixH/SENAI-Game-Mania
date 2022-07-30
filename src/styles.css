@@ -32,8 +32,8 @@ img {
   height: 3rem;
 }
 a {
-  text-decoration: none;
-  color: var(--fontWhite);
+  text-decoration: none !important;
+  color: var(--fontWhite) !important;
 }
 a:hover {
   text-decoration: none;
@@ -41,6 +41,7 @@ a:hover {
 }
 .usesFlex {
   display: flex;
+  align-items: center;
 }
 .white-font {
   color: var(--fontWhite);
@@ -71,6 +72,17 @@ input,
 input:valid {
   border-color: #ccc;
 }
-.xbttn:hover {
-  cursor: pointer;
+@media only screen and (max-width: 1150px) {
+  .bordacinza {
+    width: auto;
+  }
+  .bttnRed {
+    display: none;
+  }
+  .nav-socials {
+    display: inline-block;
+  }
+  .nav-id {
+    display: block;
+  }
 }
