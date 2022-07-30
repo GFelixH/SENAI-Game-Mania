@@ -1,24 +1,25 @@
 <main>
     <section class="login-section">
-        <form action="#" onsubmit="" name="formLogin">
+        <form action="#" name="formLogin">
             <ul>
                 <li>
                     <label for="email_login"> Insira seu e-mail:</label>
                 </li>
-                <li><input type="email" id="email_login" name="email" placeholder="user@example.com" class="bordacinza">
+                <li><input type="email" [(ngModel)]="userInput.email" id="email_login" name="email"
+                        placeholder="user@example.com" class="bordacinza">
                 </li>
                 <!-- senha -->
                 <li>
                     <label for="senha">Insira sua senha:</label>
                 </li>
                 <li>
-                    <input id="password_login" name="password"
+                    <input [(ngModel)]="userInput.password" id="password_login" name="password"
                         pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,12}$" type="password"
                         title="A senha deve conter de 6 a 12 caracteres, com pelo menos um maiúsculo, um minúsculo e um número"
                         class="bordacinza" id="senha">
                 </li>
                 <!-- submit -->
-                <input type="submit" value="login" class="bordacinza">
+                <button type="submit" (click)="loginRequest()" class="bordacinza"> Login</button>
             </ul>
         </form>
     </section>

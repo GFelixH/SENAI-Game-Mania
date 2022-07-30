@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CoreModule } from './core/core.module';
 import { MainModule } from './main/main.module';
@@ -22,6 +23,7 @@ import { Error404Component } from './core/components/error404/error404.component
     FormsModule,
     CoreModule,
     MainModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

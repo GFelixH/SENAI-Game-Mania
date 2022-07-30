@@ -4,11 +4,13 @@ import { RouterModule } from '@angular/router';
 
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { IndexComponentComponent } from './index-component/index-component.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [LoginComponentComponent, IndexComponentComponent],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild([
       {
         path: 'index',
