@@ -1,0 +1,13 @@
+/*login*/
+main {
+  background-color: var(--backgroundBlack);
+}
+.login-section {
+  margin: 0 35%;
+  background-color: var(--backgroundBlack);
+  height: 50vh;
+  padding: 3rem;
+}
+label {
+  color: var(--greenText);
+}
