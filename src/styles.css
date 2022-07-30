@@ -1,4 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+:root {
+  --mainGreen: #097810;
+  --blackContainer: #071108;
+  --backgroundBlack: #15222c;
+  --navbarRed: #990000;
+  --greenText: #73cc60;
+  --redText: #990000;
+  --greyContainer: #364652;
+  --fontBlack: #15222c;
+  --fontWhite: white;
+}
+* {
+  font-family: "Roboto Mono", monospace;
+  color: var(--fontBlack);
+}
+.svg-filter {
+  filter: invert(6%) sepia(34%) saturate(1712%) hue-rotate(172deg)
+    brightness(99%) contrast(86%);
+}
+img {
+  width: 3rem;
+  height: 3rem;
+}
+a {
+  text-decoration: none;
+  color: var(--fontWhite);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--greenText);
+}
+.usesFlex {
+  display: flex;
+}
+.white-font {
+  color: var(--fontWhite);
+}
+.red-font {
+  color: var(--redText);
+}
+.green-font {
+  color: var(--greenText);
+}
+.bordacinza {
+  background: var(--greyContainer);
+  color: var(--fontWhite);
+  padding: 0.6rem;
+  margin: 0.7rem 2rem;
+  border-radius: 30px;
+  width: auto;
+  text-align: center;
+}
+.branco {
+  background-color: white !important;
+}
+/* desktop first */
+input:invalid {
+  background-color: red;
+}
+input,
+input:valid {
+  border-color: #ccc;
+}
+.xbttn:hover {
+  cursor: pointer;
+}

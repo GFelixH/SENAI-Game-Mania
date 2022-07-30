@@ -1,0 +1,21 @@
+nav {
+  background: var(--blackContainer);
+  height: 100vh;
+  width: 20rem;
+}
+.nav-title p {
+  margin-left: 3rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.nav-socials {
+  display: none;
+  background: white;
+  padding: 1rem;
+  border-radius: 30px;
+  width: 10rem;
+  margin-left: 3rem;
+}
+nav li {
+  list-style-type: none;
+}

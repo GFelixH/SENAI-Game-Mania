@@ -1,3 +1,63 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<mat-sidenav-container [hasBackdrop]="false" class="example-container">
+    <mat-sidenav #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')"
+        (closed)="events.push('close!')">
+        <!-- NAVBAR COMPONENT -->
+        <app-navbar></app-navbar>
+    </mat-sidenav>
+
+    <!-- PAGE -->
+    <mat-sidenav-content>
+        <!-- HEADER -->
+        <header>
+            <!-- header-first-container -->
+            <div class="header-first-container usesFlex">
+                <!-- logo -->
+                <div class="logo usesFlex">
+                    <img class="svg-filter" src="../assets/images/gamepad-solid.svg"
+                        alt="Símbolo de um controle de video game">
+                    <h1>Game Mania</h1>
+                </div>
+                <div class="socials-container usesFlex">
+                    <!-- 2 redes sociais -->
+                    <a href="#"><img class="svg-filter" src="../assets/images/facebook-f-brands.svg"
+                            alt="Logo do Facebook"></a>
+                    <a href="#"><img class="svg-filter" src="../assets/images/instagram-square-brands.svg"
+                            alt="Logo do Instagram"></a>
+                </div>
+                <div class=" login-container usesFlex">
+                    <div class="login-container usesFlex">
+                        <!-- login -->
+                        <img class="svg-filter" src="../assets/images/user-solid.svg" alt="Avatar humano">
+
+                        <!-- <a href="./login.html"> -->
+                        <!-- <p>Login</p> -->
+                        <!-- </a> -->
+
+                    </div>
+                    <!-- switch bttn -->
+                    <div id="switchBttn" class="switch-bttn-container usesFlex">
+                        <img class="svg-filter" src="../assets/images/sun-solid.svg" alt="Símbolo do sol">
+                        <p>Modo Claro</p>
+                    </div>
+                </div>
+            </div>
+            <!-- header-second-container -->
+            <div class="header-second-container usesFlex">
+                <!-- navbarbotao -->
+                <div class="navbar-bttn usesFlex" (click)="sidenav.toggle()">
+                    <img class="svg-filter" src="../assets/images/bars-solid.svg" alt="3 Barras alinhadas na vertical">
+                    <p class="white-font">Navegue</p>
+                </div>
+                <!-- seachbar -->
+                <div class="header-searchbar usesFlex">
+                    <input class="white-font" type="search" placeholder="Digite o que você procura... ">
+                    <img class="svg-filter" src="../assets/images/magnifying-glass-solid.svg" alt="Lupa">
+                </div>
+            </div>
+        </header>
+
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,1 +1,19 @@
-<p>navbar works!</p>
+<nav id="navbar" class="hide">
+    <ul>
+        <li class="nav-title">
+            <p class="white-font">Game Mania </p>
+        </li>
+        <li class="nav-socials">
+            <a href="#"><img class="svg-filter" src="../assets/images/facebook-f-brands.svg" alt="Logo do Facebook"></a>
+            <a href="#"><img class="svg-filter" src="../assets/images/instagram-square-brands.svg"
+                    alt="Logo do Instagram"></a>
+        </li>
+        <li class="nav-id bordacinza"><a [routerLink]="['index/login']"><img src="../assets/images/user-solid.svg"
+                    alt="Avatar humano">Login</a>
+        </li>
+        <li class="bordacinza"><a [routerLink]="['index']">Início</a></li>
+        <li class="bordacinza"><a>Jogos</a></li>
+        <li class="bordacinza"><a>Sobre</a></li>
+        <li class="bordacinza"><a>Cadastro</a></li>
+    </ul>
+</nav>

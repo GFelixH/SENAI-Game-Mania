@@ -1,0 +1,138 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.example-events {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #555;
+}
+.mat-drawer-container {
+  background-color: transparent !important;
+}
+.mat-drawer {
+  background-color: transparent !important;
+}
+/* header */
+header {
+  width: 100vw;
+  padding: 3rem;
+  background: var(--mainGreen);
+}
+/* first container */
+.header-first-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo h1 {
+  width: 70vw;
+  font-weight: bold;
+  font-size: 4rem;
+}
+.logo img {
+  width: 6rem;
+  height: 6rem;
+  padding: 0 20px 20px 0;
+}
+.header-links-container {
+  justify-content: space-between;
+}
+.socials-container img {
+  margin: 0 2rem;
+  width: 5rem;
+  height: 5rem;
+}
+.login-container p {
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+}
+.login-container img {
+  width: 3rem;
+  height: 4rem;
+}
+.switch-bttn-container {
+  margin-top: 0.6rem;
+}
+.switch-bttn-container img {
+  width: 3rem;
+  height: 4rem;
+}
+.switch-bttn-container p {
+  margin-top: 1.9rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.header-second-container {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+.navbar-bttn {
+  cursor: pointer;
+  position: absolute;
+  left: 3rem;
+  width: 30%;
+  border-radius: 30px;
+  background: var(--navbarRed);
+  justify-content: center;
+}
+.navbar-bttn p {
+  font-size: 2.5rem;
+}
+.navbar-bttn img {
+  margin: 0.5rem 10px 0 0;
+}
+.header-searchbar input {
+  position: relative;
+  left: 16rem;
+  background: var(--blackContainer);
+  border-radius: 20px;
+  width: 30vw;
+  height: 4rem;
+  text-align: center;
+}
+.header-searchbar input::placeholder {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.header-searchbar img {
+  position: relative;
+  left: 16rem;
+  width: 3rem;
+  height: 3rem;
+  top: 0.5rem;
+}
+@media only screen and (max-width: 1150px) {
+  .socials-container {
+    display: none;
+  }
+  .login-container {
+    display: none;
+  }
+  .switch-bttn-container {
+    display: none;
+  }
+  .header-searchbar {
+    display: none;
+  }
+  .logo h1 {
+    width: 30vw;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .navbar-bttn {
+    width: 80vw;
+  }
+  .logo {
+    flex-wrap: wrap;
+  }
+  .logo h1 {
+    width: auto;
+  }
+}
