@@ -1,0 +1,14 @@
+/* footer */
+.footer {
+  max-width: 1444px;
+  margin: 0 auto;
+  background-color: var(--mainGreen) !important;
+  padding: 3rem;
+}
+.bttnRed {
+  padding: 2rem;
+  margin-left: 30rem;
+}
+.nav-id {
+  display: none;
+}

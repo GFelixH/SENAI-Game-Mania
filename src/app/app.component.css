@@ -13,6 +13,7 @@
 }
 .mat-drawer-container {
   background-color: transparent !important;
+  height: auto !important;
 }
 .mat-drawer {
   background-color: transparent !important;
@@ -123,6 +124,7 @@ header {
   }
   .logo h1 {
     width: 30vw;
+    font-size: 2.5rem;
   }
 }
 @media only screen and (max-width: 360px) {
