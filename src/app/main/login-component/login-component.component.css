@@ -5,9 +5,16 @@ main {
 .login-section {
   margin: 0 35%;
   background-color: var(--backgroundBlack);
-  height: 50vh;
+  height: auto;
   padding: 3rem;
 }
 label {
   color: var(--greenText);
+}
+.msgErro {
+  display: block;
+  color: red;
+}
+.hideThis {
+  display: none;
 }

@@ -14,9 +14,24 @@
                 </li>
                 <li>
                     <input [(ngModel)]="userInput.password" id="password_login" name="password"
-                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,12}$" type="password"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}" type="password"
                         title="A senha deve conter de 6 a 12 caracteres, com pelo menos um maiúsculo, um minúsculo e um número"
                         class="bordacinza" id="senha">
+                </li>
+                <!-- regex v1 -->
+                <!-- "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,12}$" -->
+                <!-- error message -->
+                <li [class.hideThis]="isGoodLogin">
+                    <!-- <div class="msgErro "> -->
+                    <div class="msgErro">
+                        Usuário ou senha incorreto.
+                    </div>
+                </li>
+                <li [class.hideThis]="isNotEmpty">
+                    <!-- <div class="msgErro "> -->
+                    <div class="msgErro">
+                        Preencha os campos.
+                    </div>
                 </li>
                 <!-- submit -->
                 <button type="submit" (click)="loginRequest()" class="bordacinza"> Login</button>
