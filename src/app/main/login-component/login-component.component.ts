@@ -20,19 +20,16 @@ export class LoginComponentComponent implements OnInit {
   isNotEmpty: boolean = true;
 
   loginRequest(): void {
-    console.log(this.userInput);
-
     let isPasswordValid: boolean = this.validPassword();
     let isUsernameValid: boolean = this.validUsername();
-
-    console.log('isPasswordValid value ' + isPasswordValid);
 
     if (isPasswordValid && isUsernameValid) {
       this.isNotEmpty = true;
       this.makeLogin();
     } else {
       this.isNotEmpty = false;
-      console.log('\nCredential is NOT valid\n');
+      throw new Error('Crenciais invalidas');
+
       //show error message
     }
   }
@@ -40,18 +37,18 @@ export class LoginComponentComponent implements OnInit {
   makeLogin(): void {
     this.userService.login(this.userInput).subscribe({
       next: (msg) => {
-        console.log('Login feito' + msg);
         // redirect to user page
       },
       error: (e) => {
-        this.badlogin();
+        this.badlogin(e);
       },
     });
   }
   ngOnInit(): void {}
 
-  badlogin(): void {
+  badlogin(e: Error): void {
     this.isGoodLogin = false;
+    throw new Error('Crenciais invalidas ' + e.message);
   }
 
   validPassword(): boolean {
@@ -60,11 +57,6 @@ export class LoginComponentComponent implements OnInit {
     //   '^(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,12}$'
     // );
     let result = exp.test(this.userInput.password);
-
-    console.log(
-      'teste password passa regex ' + this.userInput.password + ' ' + result
-    );
-
     return result;
   }
 
