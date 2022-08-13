@@ -41,6 +41,7 @@ export class LoginComponentComponent implements OnInit {
     this.userService.login(this.userInput).subscribe({
       next: (msg) => {
         console.log('Login feito' + msg);
+        // redirect to user page
       },
       error: (e) => {
         this.badlogin();
